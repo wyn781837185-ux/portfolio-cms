@@ -1,0 +1,106 @@
+[
+  {
+    "id": "e84ed88f-05f5-49fd-83a3-eae7467296c7",
+    "createdAt": "2026-05-31T01:34:05.814Z",
+    "title": "换脸技术",
+    "category": "web",
+    "type": "ai 换脸",
+    "year": "2026",
+    "summary": "图书",
+    "body": "",
+    "tags": [
+      "图书"
+    ],
+    "image": "/uploads/1780191224140-3aa6f3901a86.jpg",
+    "featured": true,
+    "updatedAt": "2026-05-31T01:34:05.815Z"
+  },
+  {
+    "id": "fac06e42-9214-4065-a3c8-f5c0f4b2fd76",
+    "createdAt": "2026-05-30T17:04:56.657Z",
+    "updatedAt": "2026-05-30T17:04:56.658Z",
+    "title": "我的作品 1",
+    "category": "web",
+    "type": "图片作品",
+    "year": "2026",
+    "summary": "这是通过后台上传的作品，可以继续编辑标题、介绍和详情。",
+    "body": "<h2>作品介绍</h2><p>这条作品保留了你已经上传过的图片。你可以在后台继续补充更完整的项目说明。</p>",
+    "tags": [
+      "图片"
+    ],
+    "image": "/uploads/1780160684036-b7fca6d71379.webp",
+    "featured": true
+  },
+  {
+    "id": "seed-crm",
+    "title": "Nexa CRM 工作台",
+    "category": "product",
+    "type": "产品设计",
+    "year": "2026",
+    "summary": "面向销售团队的客户管理工作台，整合线索、任务和关键数据。",
+    "body": "<h2>项目背景</h2><p>客户需要把分散的客户数据、跟进任务和运营指标合并成一个高频使用的工作台。</p><h3>设计重点</h3><ul><li>减少信息查找路径</li><li>突出当天最重要的待办</li><li>建立统一的组件和数据状态</li></ul>",
+    "tags": [
+      "SaaS",
+      "Dashboard",
+      "UX"
+    ],
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+    "featured": false,
+    "createdAt": "2026-05-31T00:00:00.000Z",
+    "updatedAt": "2026-05-31T00:00:00.000Z"
+  },
+  {
+    "id": "seed-coffee",
+    "title": "Mori Coffee 官网",
+    "category": "web",
+    "type": "响应式网页",
+    "year": "2025",
+    "summary": "为精品咖啡品牌设计的官网，兼顾品牌展示和移动端浏览。",
+    "body": "<h2>项目介绍</h2><p>页面以门店氛围、产品系列和品牌故事为核心，帮助用户快速了解品牌调性。</p>",
+    "tags": [
+      "Web",
+      "Brand",
+      "Mobile"
+    ],
+    "image": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80",
+    "featured": false,
+    "createdAt": "2026-05-31T00:00:00.000Z",
+    "updatedAt": "2026-05-31T00:00:00.000Z"
+  },
+  {
+    "id": "seed-flow",
+    "title": "FlowNote 创作 App",
+    "category": "product",
+    "type": "移动端界面",
+    "year": "2025",
+    "summary": "为内容创作者设计的轻量记录和灵感整理工具。",
+    "body": "<h2>项目介绍</h2><p>围绕快速记录、灵感归档和内容计划三个核心场景进行设计。</p>",
+    "tags": [
+      "App",
+      "Design System",
+      "Prototype"
+    ],
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+    "featured": false,
+    "createdAt": "2026-05-31T00:00:00.000Z",
+    "updatedAt": "2026-05-31T00:00:00.000Z"
+  },
+  {
+    "id": "seed-brand",
+    "title": "Solace 品牌视觉",
+    "category": "brand",
+    "type": "品牌系统",
+    "year": "2024",
+    "summary": "从标识、色彩、版式到发布物料的一整套品牌视觉系统。",
+    "body": "<h2>项目介绍</h2><p>为新品牌建立一套可扩展的视觉语言，方便后续在官网、社交媒体和线下物料中统一使用。</p>",
+    "tags": [
+      "Identity",
+      "Guideline",
+      "Launch"
+    ],
+    "image": "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80",
+    "featured": false,
+    "createdAt": "2026-05-31T00:00:00.000Z",
+    "updatedAt": "2026-05-31T00:00:00.000Z"
+  }
+]

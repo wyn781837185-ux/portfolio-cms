@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-cms",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "deploy:tencent": "tcb framework deploy",
+    "start:pm2": "pm2 start ecosystem.config.cjs"
+  },
+  "devDependencies": {
+    "@cloudbase/cli": "^3.5.3"
+  }
+}

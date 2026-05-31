@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录作品后台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="login-body">
+    <main class="login-shell">
+      <section class="login-card">
+        <a class="back-link" href="./index.html">
+          <i data-lucide="arrow-left"></i>
+          <span>返回作品集</span>
+        </a>
+        <p class="eyebrow">Portfolio CMS</p>
+        <h1>登录后台</h1>
+        <p>输入你的后台密钥后，就可以维护个人资料、作品详情和排序。</p>
+        <form id="loginForm" class="login-form vertical">
+          <input type="password" id="tokenInput" placeholder="默认密钥：portfolio-admin" autocomplete="current-password" />
+          <button class="primary-action" type="submit">
+            <i data-lucide="log-in"></i>
+            <span>进入后台</span>
+          </button>
+        </form>
+      </section>
+      <section class="login-preview" aria-label="后台能力预览">
+        <article>
+          <i data-lucide="user-round-cog"></i>
+          <span>资料编辑</span>
+        </article>
+        <article>
+          <i data-lucide="image-up"></i>
+          <span>头像上传</span>
+        </article>
+        <article>
+          <i data-lucide="file-pen-line"></i>
+          <span>富文本详情</span>
+        </article>
+        <article>
+          <i data-lucide="grip-vertical"></i>
+          <span>拖拽排序</span>
+        </article>
+      </section>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite">密钥不正确</div>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./login.js"></script>
+  </body>
+</html>

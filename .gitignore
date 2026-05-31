@@ -1,0 +1,11 @@
+node_modules/
+pdf_pages/
+uploads/*
+!uploads/.gitkeep
+*.traineddata
+hhh_ocr.txt
+hhh_translation_zh.md
+*.png
+.env
+.DS_Store
+npm-debug.log

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>作品后台管理</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-shell">
+      <section class="admin-hero compact">
+        <div>
+          <a class="back-link" href="./index.html">
+            <i data-lucide="arrow-left"></i>
+            <span>返回作品集</span>
+          </a>
+          <p class="eyebrow">Portfolio Admin</p>
+          <h1>内容后台</h1>
+          <p>管理个人资料、头像、作品详情、富文本介绍和作品排序。</p>
+        </div>
+        <div class="admin-status" id="adminStatus">
+          <i data-lucide="shield-check"></i>
+          <span>已登录</span>
+        </div>
+      </section>
+
+      <section class="admin-tabs" aria-label="后台模块">
+        <button class="active" type="button" data-panel="profilePanel">
+          <i data-lucide="user-round-cog"></i>
+          <span>个人资料</span>
+        </button>
+        <button type="button" data-panel="projectsPanel">
+          <i data-lucide="layers-3"></i>
+          <span>作品管理</span>
+        </button>
+        <button type="button" id="logoutButton">
+          <i data-lucide="log-out"></i>
+          <span>退出</span>
+        </button>
+      </section>
+
+      <section class="admin-panel" id="profilePanel">
+        <form class="editor-panel wide" id="profileForm">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Profile</p>
+              <h2>自我介绍与头像资料</h2>
+            </div>
+            <button class="primary-action" type="submit">
+              <i data-lucide="save"></i>
+              <span>保存资料</span>
+            </button>
+          </div>
+
+          <div class="profile-editor-grid">
+            <div>
+              <label>
+                <span>姓名 / 品牌名</span>
+                <input id="profileName" required />
+              </label>
+              <label>
+                <span>身份标题</span>
+                <input id="profileTitle" required />
+              </label>
+              <label>
+                <span>首页简介</span>
+                <textarea id="profileIntro" rows="4" required></textarea>
+              </label>
+              <label>
+                <span>详细自我介绍</span>
+                <textarea id="profileBio" rows="6"></textarea>
+              </label>
+            </div>
+
+            <div>
+              <label>
+                <span>头像 / 主视觉图</span>
+                <div class="upload-box">
+                  <input id="profileAvatar" required placeholder="图片 URL，或上传后自动填入" />
+                  <input id="profileAvatarFile" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
+                </div>
+              </label>
+              <div class="image-preview tall" id="profileAvatarPreview">
+                <span>暂无图片</span>
+              </div>
+              <div class="form-row">
+                <label>
+                  <span>邮箱</span>
+                  <input id="profileEmail" />
+                </label>
+                <label>
+                  <span>电话</span>
+                  <input id="profilePhone" />
+                </label>
+              </div>
+              <label>
+                <span>状态</span>
+                <input id="profileAvailability" />
+              </label>
+              <label>
+                <span>技能标签</span>
+                <input id="profileSkills" placeholder="UI Design, Frontend, CMS" />
+              </label>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-panel is-hidden" id="projectsPanel">
+        <div class="admin-grid large">
+          <form class="editor-panel" id="projectForm">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Editor</p>
+                <h2 id="formTitle">新增作品</h2>
+              </div>
+              <button class="ghost-action" type="button" id="resetForm">
+                <i data-lucide="plus"></i>
+                <span>新建</span>
+              </button>
+            </div>
+
+            <input type="hidden" id="projectId" />
+
+            <label>
+              <span>作品标题</span>
+              <input id="titleInput" required placeholder="例如：Mori Coffee 官网" />
+            </label>
+
+            <div class="form-row">
+              <label>
+                <span>分类</span>
+                <select id="categoryInput">
+                  <option value="product">产品</option>
+                  <option value="web">网页</option>
+                  <option value="brand">品牌</option>
+                </select>
+              </label>
+              <label>
+                <span>年份</span>
+                <input id="yearInput" required placeholder="2026" />
+              </label>
+            </div>
+
+            <label>
+              <span>类型</span>
+              <input id="typeInput" required placeholder="产品设计 / 响应式网页 / 品牌系统" />
+            </label>
+
+            <label>
+              <span>标签</span>
+              <input id="tagsInput" placeholder="SaaS, Dashboard, UX" />
+            </label>
+
+            <label>
+              <span>列表摘要</span>
+              <textarea id="summaryInput" rows="3" placeholder="显示在作品详情页顶部的简短介绍"></textarea>
+            </label>
+
+            <label class="check-row">
+              <input id="featuredInput" type="checkbox" />
+              <span>设为精选案例</span>
+            </label>
+
+            <label>
+              <span>作品封面</span>
+              <div class="upload-box">
+                <input id="imageInput" required placeholder="图片 URL，或上传后自动填入" />
+                <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif" />
+              </div>
+            </label>
+
+            <div class="image-preview" id="imagePreview">
+              <span>暂无图片</span>
+            </div>
+
+            <label>
+              <span>富文本详情</span>
+              <div class="rich-toolbar" aria-label="富文本工具">
+                <button type="button" data-command="bold"><i data-lucide="bold"></i></button>
+                <button type="button" data-command="italic"><i data-lucide="italic"></i></button>
+                <button type="button" data-command="insertUnorderedList"><i data-lucide="list"></i></button>
+                <button type="button" data-command="formatBlock" data-value="h3"><i data-lucide="heading-3"></i></button>
+                <button type="button" data-command="formatBlock" data-value="p"><i data-lucide="pilcrow"></i></button>
+              </div>
+              <div class="rich-editor" id="bodyInput" contenteditable="true"></div>
+            </label>
+
+            <button class="primary-action save-btn" type="submit">
+              <i data-lucide="save"></i>
+              <span>保存作品</span>
+            </button>
+          </form>
+
+          <section class="manager-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Library</p>
+                <h2>拖拽排序</h2>
+              </div>
+              <button class="ghost-action" type="button" id="saveOrderButton">
+                <i data-lucide="grip-vertical"></i>
+                <span>保存排序</span>
+              </button>
+            </div>
+            <div class="admin-list sortable" id="adminList"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">已保存</div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>

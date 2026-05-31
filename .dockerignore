@@ -1,0 +1,12 @@
+node_modules
+.git
+pdf_pages
+*.traineddata
+hhh_ocr.txt
+hhh_translation_zh.md
+portfolio-preview.png
+portfolio-cms-admin.png
+portfolio-cms-home.png
+portfolio-admin-upgraded.png
+portfolio-detail-upgraded.png
+npm-debug.log

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>作品详情</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="detail-shell">
+      <a class="back-link" href="./index.html#projects">
+        <i data-lucide="arrow-left"></i>
+        <span>返回作品集</span>
+      </a>
+      <section class="detail-hero">
+        <div>
+          <p class="eyebrow" id="projectType">Project</p>
+          <h1 id="projectTitle">作品详情</h1>
+          <p id="projectSummary"></p>
+          <div class="project-meta detail-tags" id="projectTags"></div>
+        </div>
+        <img id="projectImage" src="" alt="作品封面" />
+      </section>
+      <article class="detail-content" id="projectBody"></article>
+    </main>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./project.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+node_modules
+pdf_pages
+*.png
+*.traineddata
+hhh_ocr.txt
+hhh_translation_zh.md
+.git
+.DS_Store
+portfolio-preview.png
+portfolio-cms-admin.png
+portfolio-cms-home.png
+portfolio-admin-upgraded.png
+portfolio-detail-upgraded.png

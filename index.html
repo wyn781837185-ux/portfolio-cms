@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人作品展示 App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="作品导航">
+        <div class="brand">
+          <div class="brand-mark">L</div>
+          <div>
+            <strong id="brandName">Lin Studio</strong>
+            <span>Portfolio CMS</span>
+          </div>
+        </div>
+
+        <nav class="nav-list" aria-label="主导航">
+          <a href="#overview" class="active" data-nav="overview">
+            <i data-lucide="layout-dashboard"></i>
+            <span>总览</span>
+          </a>
+          <a href="#projects" data-nav="projects">
+            <i data-lucide="layers-3"></i>
+            <span>作品</span>
+          </a>
+          <a href="#process" data-nav="process">
+            <i data-lucide="sparkles"></i>
+            <span>方法</span>
+          </a>
+          <a href="#contact" data-nav="contact">
+            <i data-lucide="send"></i>
+            <span>联系</span>
+          </a>
+        </nav>
+
+        <div class="availability">
+          <span class="pulse"></span>
+          <div>
+            <strong id="availabilityText">可接新项目</strong>
+            <small id="skillText">产品设计 / 前端开发</small>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <button class="icon-btn menu-toggle" type="button" aria-label="打开导航">
+            <i data-lucide="menu"></i>
+          </button>
+          <div class="search-box">
+            <i data-lucide="search"></i>
+            <input type="search" id="projectSearch" placeholder="搜索项目、技能或行业" />
+          </div>
+          <div class="top-actions">
+            <a class="ghost-action admin-link" href="./login.html">
+              <i data-lucide="settings"></i>
+              <span>后台</span>
+            </a>
+            <button class="icon-btn" type="button" aria-label="切换显示模式" id="themeToggle">
+              <i data-lucide="moon"></i>
+            </button>
+            <a class="primary-action" href="#contact">
+              <i data-lucide="message-circle"></i>
+              <span>预约沟通</span>
+            </a>
+          </div>
+        </header>
+
+        <section class="hero" id="overview">
+          <div class="hero-copy">
+            <p class="eyebrow" id="profileTitle">UI Designer · Frontend Maker</p>
+            <h1 id="profileName">林之远</h1>
+            <p class="intro" id="profileIntro">
+              把复杂产品变成清晰、漂亮、能落地的数字体验。作品数据由后台管理，上传后会自动展示在这个页面。
+            </p>
+            <div class="hero-actions">
+              <a class="primary-action" href="#projects">
+                <i data-lucide="arrow-down-right"></i>
+                <span>查看作品</span>
+              </a>
+              <button class="ghost-action" type="button" id="copyEmail">
+                <i data-lucide="copy"></i>
+                <span>复制邮箱</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="profile-panel" aria-label="个人简介卡片">
+            <img id="profileAvatar" src="" alt="个人头像或主视觉" />
+            <div class="profile-card">
+              <span>作品总数</span>
+              <strong id="projectTotal">0</strong>
+              <small>后台实时同步</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="作品数据">
+          <article>
+            <span>平均交付周期</span>
+            <strong>3.5 周</strong>
+          </article>
+          <article>
+            <span>客户复购率</span>
+            <strong>72%</strong>
+          </article>
+          <article>
+            <span>核心能力</span>
+            <strong>UI + Web</strong>
+          </article>
+          <article>
+            <span>项目评分</span>
+            <strong>4.9/5</strong>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="project-section" id="projects">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Selected Work</p>
+                <h2>精选作品</h2>
+              </div>
+              <div class="filter-tabs" aria-label="作品筛选">
+                <button class="active" type="button" data-filter="all">全部</button>
+                <button type="button" data-filter="product">产品</button>
+                <button type="button" data-filter="web">网页</button>
+                <button type="button" data-filter="brand">品牌</button>
+              </div>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid"></div>
+            <p class="empty-state" id="emptyState">还没有匹配的作品。</p>
+          </div>
+
+          <aside class="case-panel" aria-label="精选案例" id="featuredCase"></aside>
+        </section>
+
+        <section class="process-section" id="process">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Workflow</p>
+              <h2>合作方式</h2>
+            </div>
+          </div>
+          <div class="process-list">
+            <article>
+              <i data-lucide="radar"></i>
+              <h3>发现问题</h3>
+              <p>梳理目标用户、业务约束和当前页面卡点，先找到真正值得设计的地方。</p>
+            </article>
+            <article>
+              <i data-lucide="pen-tool"></i>
+              <h3>设计系统</h3>
+              <p>建立清晰的版式、组件、颜色和交互状态，让界面稳定又有辨识度。</p>
+            </article>
+            <article>
+              <i data-lucide="code-2"></i>
+              <h3>前端落地</h3>
+              <p>把设计制作成可运行页面，兼顾响应式、细节动效和后续维护。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 id="profileBio">有项目想法？一起把它做出来。</h2>
+          </div>
+          <div class="contact-card" id="contactCard"></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">邮箱已复制</div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
