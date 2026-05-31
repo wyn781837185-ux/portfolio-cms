@@ -7,8 +7,9 @@ const crypto = require("node:crypto");
 const PORT = Number(process.env.PORT || 5174);
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || "portfolio-admin";
 const ROOT = __dirname;
-const DATA_DIR = path.join(ROOT, "data");
-const UPLOAD_DIR = path.join(ROOT, "uploads");
+const WRITABLE_ROOT = process.env.VERCEL ? "/tmp/portfolio-cms" : ROOT;
+const DATA_DIR = path.join(WRITABLE_ROOT, "data");
+const UPLOAD_DIR = path.join(WRITABLE_ROOT, "uploads");
 const PROJECTS_FILE = path.join(DATA_DIR, "projects.json");
 const PROFILE_FILE = path.join(DATA_DIR, "profile.json");
 

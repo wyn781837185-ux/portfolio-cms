@@ -7,5 +7,6 @@ hhh_ocr.txt
 hhh_translation_zh.md
 *.png
 .env
+.render-admin-token.txt
 .DS_Store
 npm-debug.log
