@@ -10,3 +10,5 @@ hhh_translation_zh.md
 .render-admin-token.txt
 .DS_Store
 npm-debug.log
+
+.vercel

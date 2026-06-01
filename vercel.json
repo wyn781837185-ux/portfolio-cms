@@ -1,16 +1,13 @@
 {
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "{index.html,admin.html,login.html,project.html,app.js,admin.js,login.js,project.js,styles.css,uploads/**}"
+    }
+  },
   "rewrites": [
     {
-      "source": "/api/(.*)",
+      "source": "/(.*)",
       "destination": "/api/index.js"
-    },
-    {
-      "source": "/admin",
-      "destination": "/admin.html"
-    },
-    {
-      "source": "/login",
-      "destination": "/login.html"
     }
   ]
 }
