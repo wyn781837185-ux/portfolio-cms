@@ -476,8 +476,10 @@ function serveStatic(req, res, pathname) {
   if (filePath === "/admin") filePath = "/admin.html";
   if (filePath === "/login") filePath = "/login.html";
 
-  const absolute = path.normalize(path.join(ROOT, filePath));
-  if (!absolute.startsWith(ROOT)) {
+  const baseDir = filePath.startsWith("/uploads/") ? UPLOAD_DIR : ROOT;
+  const relativePath = filePath.startsWith("/uploads/") ? filePath.replace(/^\/uploads\//, "") : filePath;
+  const absolute = path.normalize(path.join(baseDir, relativePath));
+  if (!absolute.startsWith(baseDir)) {
     sendText(res, 403, "Forbidden");
     return;
   }
